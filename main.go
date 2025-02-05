@@ -20,12 +20,46 @@ type Person struct {
 	}
 }
 
+type WeaponType int
+
+const (
+	sword WeaponType = iota
+	gun
+	bow
+)
+
 func main() {
 	// structDemo()
 	// mapDemo1()
-	//mapDemo3()
+	// mapDemo3()
 	// fmt.Printf("damage:%d\n", getDamage("ord"))
+	loopSlice()
 
+}
+
+func loopSlice2() {
+	var slice1 = []string{"a", "b", "c", "d", "e"}
+	for _, v := range slice1 {
+		fmt.Println(v)
+	}
+}
+
+func loopSlice() {
+	var slice1 = []int{1, 2, 3, 4, 5}
+	for i := 0; i < len(slice1); i++ {
+		fmt.Println(slice1[i])
+	}
+}
+
+func getDamage2(weaponType WeaponType) int {
+	switch weaponType {
+	case sword:
+		return 10
+	case gun:
+		return 20
+	default:
+		panic("unknow weapon type")
+	}
 }
 
 func getDamage(weaponType string) int {
