@@ -11,5 +11,5 @@ func main() {
 		UserName: "John",
 		Age:      utils.GetRandNum(100),
 	}
-	fmt.Println("user数据为", user)
+	fmt.Printf("user数据为%+v", user)
 }
