@@ -8,7 +8,6 @@ type Storage interface {
 	Get(key string) (any, error)
 	Set(key string, value string) error
 }
-
 type MemoryStorage struct{}
 
 func (m *MemoryStorage) Get(key string) (any, error) {
@@ -26,10 +25,7 @@ type Client struct {
 }
 
 func main() {
-	s := &Client{
-		&MemoryStorage{},
-	}
-
+	s := &Client{&MemoryStorage{}}
 	s.storage.Set("k1", "v1")
 	val, err := s.storage.Get("k1")
 	if err == nil {
