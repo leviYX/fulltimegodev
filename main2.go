@@ -29,7 +29,7 @@ func (c Color) String() string {
 	}
 }
 
-func main() {
+func main2() {
 	/**
 	Println 方法会调用参数的String 方法，然后我的func (c Color) String() string 实现了该方法，所以会打印出对应的颜色。
 	等于是String的接口实现，这里Color实现了String接口。所以传入Color类型，就会调用该方法。
