@@ -14,7 +14,7 @@ type Player struct {
 	Position
 }
 
-func main1() {
+func main3() {
 	p := Player{}
 	p.Move(1)
 }
