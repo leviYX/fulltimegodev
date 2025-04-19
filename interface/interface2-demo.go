@@ -24,12 +24,11 @@ type Client struct {
 	storage Storage
 }
 
-//
-//func main() {
-//	s := &Client{&MemoryStorage{}}
-//	s.storage.Set("k1", "v1")
-//	val, err := s.storage.Get("k1")
-//	if err == nil {
-//		fmt.Println("k1 -> value is ", val)
-//	}
-//}
+func main() {
+	s := &Client{&MemoryStorage{}}
+	s.storage.Set("k1", "v1")
+	val, err := s.storage.Get("k1")
+	if err == nil {
+		fmt.Println("k1 -> value is ", val)
+	}
+}
